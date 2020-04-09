@@ -6,7 +6,7 @@ WORKDIR /var/darknet
 ENV NVIDIA_VISIBLE_DEVICES=all
 ENV NVIDIA_DRIVER_CAPABILITIES=compute,utility
 
-COPY darknet/ ./
+COPY darknet /var/darknet
 # configure build settings
 RUN sed -ie "s/GPU=0/GPU=1/g" Makefile
 RUN sed -ie "s/CUDNN=0/CUDNN=1/g" Makefile
