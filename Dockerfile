@@ -1,4 +1,4 @@
-FROM cuda10.0-cudnn7-opencv3.4.0:latest
+FROM cuda10-cudnn7-opencv3.4.0:latest
 
 WORKDIR /var/darknet
 
