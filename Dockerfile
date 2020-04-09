@@ -9,7 +9,7 @@ ENV NVIDIA_DRIVER_CAPABILITIES=compute,utility
 # build darknet
 RUN git clone https://github.com/AlexeyAB/darknet.git .
 # specify latest commit because AlexeyAB/darknet does not maintained with github's release
-RUN git checkout d9e559a245829830dec03c6d3b909857c6d7937f
+RUN git checkout 3d9aa2af4718a3bd5bbe23de2022987cb767e9c5
 # configure build settings
 RUN sed -ie "s/GPU=0/GPU=1/g" Makefile
 RUN sed -ie "s/CUDNN=0/CUDNN=1/g" Makefile
